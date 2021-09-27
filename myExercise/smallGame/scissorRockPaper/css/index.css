@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: block;
+  margin: 20px auto;
+  width: 350px;
+  height: 780px;
+  border: 1px rgb(219, 231, 110) solid;
+  overflow: hidden;
+  background-color: rgba(20, 20, 20, 0.26);
+}
+
+.top {
+  width: 250px;
+  margin: 30px auto 0px;
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.top #playerAction {
+  margin: 0px 25px;
+}
+
+select {
+  width: 100px;
+  height: 30px;
+}
+
+input {
+  width: 45px;
+  height: 30px;
+}

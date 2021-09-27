@@ -1,0 +1,412 @@
+/* 主页index.html的样式 */
+
+/* 顶部导航条的容器 */
+.topbar-wrapper {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #333;
+}
+
+/* 设置超链接颜色 */
+.topbar a {
+  font-size: 12px;
+  color: #b0b0b0;
+  display: block;
+  padding: 0 7px;
+}
+
+/* 设置超链接移入效果 */
+.topbar a:hover {
+  color: #fff;
+}
+
+/* 设置中间分割线 */
+.topbar .line {
+  font-size: 12px;
+  color: #424242;
+}
+
+/* 设置左侧导航栏 */
+.service,
+.topbar li {
+  float: left;
+}
+
+/* 设置右侧导航栏 */
+.shop-cart,
+.user-info {
+  float: right;
+}
+
+.shop-cart {
+  margin-left: 26px;
+}
+
+/* 设置购物车样式 */
+.shop-cart a {
+  width: 120px;
+  background-color: #424242;
+  /* 设置文字水平居中 */
+  text-align: center;
+}
+
+.shop-cart:hover a {
+  background-color: #fff;
+  color: #ff6700;
+}
+
+.shop-cart i {
+  margin-right: 2px;
+}
+
+/* 设置导航栏 */
+/* 设置导航栏的图片 */
+.site-header {
+  height: 100px;
+}
+
+.container {
+  height: 100px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, .3); */
+  position: relative;
+}
+
+.container img {
+  float: left;
+  height: 56px;
+  height: 56px;
+  margin-top: 22px;
+  position: absolute;
+}
+
+.container img:hover {
+  left: 0.3px;
+}
+
+/* 设置登录弹窗模块 */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: normal;
+  font-family: verdana, tahoma, helvetica, arial, sans-serif, "宋体";
+  font-style: normal;
+  list-style-type: none;
+  text-decoration: none;
+}
+/*login*/
+#loginbg {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  height: 100%;
+  width: 100%;
+  background: rgb(19, 19, 19);
+  filter: alpha(opacity=30);
+  -moz-opacity: 0.3;
+  opacity: 0.3;
+}
+
+#login {
+  display: none;
+  border-radius: 10px;
+  position: fixed;
+  top: 30%;
+  left: 38%;
+  width: 410px;
+  z-index: 201;
+  background: #fff;
+}
+
+:root {
+  --inputFontSize: 18px;
+}
+
+input::-webkit-input-placeholder {
+  /* WebKit browsers */
+  font-size: var(--inputFontSize);
+  color: red;
+}
+
+input {
+  font-size: var(--inputFontSize);
+}
+
+#login h2 input {
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: relative;
+  left: 6px;
+  top: -2px;
+  height: 30px;
+  width: 30px;
+  float: right;
+  border: none;
+  cursor: pointer;
+  margin: 2px 6px 0 0;
+  font-size: 18px;
+}
+
+/* 设置用户名和输入框 */
+#LoginForm > li:nth-child(1) {
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
+
+#LoginForm > li:nth-child(1) label {
+  font-size: 18px;
+}
+
+#login h2 input:hover {
+  background-color: red;
+  color: white;
+}
+
+/* 设置密码和输入框 */
+#LoginForm > li:nth-child(2) {
+  width: 300px;
+  margin: 0 auto;
+}
+
+#LoginForm > li:nth-child(2) label {
+  font-size: 18px;
+}
+
+/* 设置输入框 */
+#login #username,
+#password {
+  width: 229px;
+  height: 28px;
+}
+
+/* 设置自动登录勾选项 */
+#LoginForm > li:nth-child(3) {
+  width: 300px;
+  margin: 15px auto;
+  text-align: center;
+}
+
+#LoginForm > li:nth-child(3) input {
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+/* 设置登录按钮 */
+#LoginForm > li:nth-child(4) {
+  width: 300px;
+  margin: 15px auto;
+  text-align: center;
+}
+
+#LoginForm #fnlogin {
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 300px;
+  height: 30px;
+  border-radius: 4px;
+  background-color: rgb(255, 106, 0);
+}
+
+/* 设置注册弹窗 */
+/*register*/
+#registerbg {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  height: 100%;
+  width: 100%;
+  background: rgb(19, 19, 19);
+  filter: alpha(opacity=30);
+  -moz-opacity: 0.3;
+  opacity: 0.3;
+}
+
+#register {
+  display: none;
+  border-radius: 10px;
+  position: fixed;
+  top: 30%;
+  left: 38%;
+  width: 410px;
+  z-index: 201;
+  background: #ffffff;
+}
+
+#register h2 input {
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: relative;
+  left: 6px;
+  top: -2px;
+  height: 30px;
+  width: 30px;
+  float: right;
+  border: none;
+  cursor: pointer;
+  margin: 2px 6px 0 0;
+  font-size: 18px;
+}
+
+#register h2 input:hover {
+  background-color: red;
+  color: #fff;
+}
+
+#register h2 {
+  text-align: center;
+}
+
+#register h2 a {
+  font-size: 25px;
+  margin-left: 35px;
+}
+
+/* 设置用户名和输入框 */
+#RegisterForm > li:nth-child(1) {
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+#RegisterForm > li:nth-child(1) label {
+  font-size: 18px;
+}
+
+#RegisterForm h2 input:hover {
+  background-color: red;
+  color: white;
+}
+
+/* 设置密码和输入框 */
+#RegisterForm > li:nth-child(2) {
+  width: 300px;
+  margin: 0 auto;
+}
+
+#register #usernameRegister,
+#passwordRegister {
+  width: 229px;
+  height: 28px;
+}
+
+#RegisterForm > li:nth-child(2) label {
+  font-size: 18px;
+}
+
+/* 设置注册按钮 */
+#RegisterForm > li:nth-child(4) {
+  width: 300px;
+  margin: 15px auto;
+  margin-top: 50px;
+  text-align: center;
+}
+
+#RegisterForm #fnregister {
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 300px;
+  height: 30px;
+  border-radius: 4px;
+  background-color: rgb(255, 106, 0);
+}
+
+/* 设置导航栏的列表 */
+.nav-list {
+  width: 992px;
+  height: 100px;
+  /* background-color: yellow; */
+  margin-left: 234px;
+}
+
+.nav-list li {
+  float: left;
+  font-size: 16px;
+  padding: 36px 10px 38px;
+}
+
+.nav-list a {
+  display: block;
+  font-size: 16px;
+  /* height: 100px; */
+}
+
+.nav-list input {
+  width: 295px;
+  height: 50px;
+  outline: none;
+  margin-top: 23px;
+  margin-left: 74px;
+  background-image: url();
+}
+
+.nav-list input:focus {
+  border: 2px red solid;
+}
+
+/* 设置内容区 */
+.content {
+  width: 1226px;
+  height: 460px;
+  /* border: 1px red solid; */
+  background-image: url(../img/xiaomizhinengshenghuo.webp);
+}
+
+.content .aside {
+  float: left;
+  width: 234px;
+  height: 460px;
+}
+
+.content .aside-wrapper {
+  width: 234px;
+  height: 420px;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.content .aside-wrapper li {
+  width: 234px;
+  height: 42px;
+}
+
+.content .aside-wrapper li a {
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Source Code Pro';
+  line-height: 42px;
+  display: block;
+  padding-left: 30px;
+}
+
+.content .aside-wrapper li a:hover {
+  background-color: #ff6700;
+}
+
+/* 设置左侧第一个栏目 */
+.aside-wrapper li img {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  /* padding-left: 40px; */
+  top: 12px;
+  float: right;
+  padding-right: 5px;
+  display: inline-block;
+  /* transform: rotate(90deg); */
+}
+
+input::-webkit-input-placeholder {
+  color: #999;
+  font-size: 16px;
+}

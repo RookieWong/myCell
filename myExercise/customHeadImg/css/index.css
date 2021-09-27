@@ -1,0 +1,49 @@
+#headImg {
+    width: 100%;
+}
+
+.icon {
+    width: 100%;
+    height: 160px;
+    border: rgb(30, 221, 247) 1px solid;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.icon img {
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.dialema img {
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    left: 120px;
+}
+.animal img {
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    left: 240px;
+}
+
+.btn{
+    margin-top: 15px;
+}
+
+button {
+    display: inline-block;
+    width: 40%;
+    height: 40px;
+    font-size: 25px;
+    margin: 10px auto;
+    border: none;
+    background-color: rgba(247, 161, 255, 0.507);
+}
+
+button:hover {
+    background-color: rgb(132, 219, 132);
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>谁最美</title>
+    <style>
+      table {
+        border: black 1px solid;
+        border-spacing: 0;
+        width: 250px;
+        height: 250px;
+        text-align: center;
+      }
+      .wrapper {
+        width: 250px;
+        margin: 0 auto;
+        margin-top: 80px;
+        /* margin-right: 10px; */
+        /* border: 2px rgb(40, 255, 11) solid; */
+      }
+      table td {
+        /* color: #fff; */
+        width: 50px;
+        height: 50px;
+      }
+
+      #cell3 {
+        /* background-color: orange; */
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 50px;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="./index.js" defer></script>
+    <div class="wrapper">
+      <table border="1px">
+        <tr>
+          <td id="cell1">灵灵</td>
+          <td id="cell2">一夫</td>
+          <td id="cell3">一夫</td>
+          <td id="cell4">阿伟</td>
+        </tr>
+        <tr>
+          <td id="cell12">冉冉</td>
+          <td id="cellCenter" rowspan="2" colspan="2">魔镜魔镜谁最美</td>
+          <!-- <td></td> -->
+          <td id="cell5">冉冉</td>
+        </tr>
+        <tr>
+          <td id="cell11">阿伟</td>
+          <!-- <td colspan="2"></td> -->
+          <!-- <td></td> -->
+          <td id="cell6">阿伟</td>
+        </tr>
+        <tr>
+          <td id="cell10">一夫</td>
+          <td id="cell9">灵灵</td>
+          <td id="cell8">灵灵</td>
+          <td id="cell7">冉冉</td>
+        </tr>
+      </table>
+      <button onclick="runLoop()">开始</button>
+    </div>
+  </body>
+</html>

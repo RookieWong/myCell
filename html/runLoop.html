@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>抽礼物</title>
+    <link rel="stylesheet" href="../css/runLoop.css" />
+  </head>
+  <body>
+    <script src="../js/runLoop.js" defer></script>
+
+    <img id="backgroundImg" src="../img/threeFlowers.webp" alt="">
+    <div class="wrapper">
+      <table border="1px">
+        <tr>
+          <td id="cell1">口红</td>
+          <td id="cell2">护肤</td>
+          <td id="cell3">化妆品</td>
+          <td id="cell4">衣服</td>
+        </tr>
+        <tr>
+          <td id="cell12">帽子</td>
+          <td id="cellCenter" rowspan="2" colspan="2">抽七夕礼物！</td>
+          <!-- <td></td> -->
+          <td id="cell5">鞋子</td>
+        </tr>
+        <tr>
+          <td id="cell11">包包</td>
+          <!-- <td colspan="2"></td> -->
+          <!-- <td></td> -->
+          <td id="cell6">化妆镜</td>
+        </tr>
+        <tr>
+          <td id="cell10">摆件</td>
+          <td id="cell9">化妆盒</td>
+          <td id="cell8">饰品</td>
+          <td id="cell7">鲜花</td>
+        </tr>
+      </table>
+      
+      <button onclick="rotateLoop()"><img src="../img/start.svg" alt=""></button>
+    </div>
+  </body>
+</html>

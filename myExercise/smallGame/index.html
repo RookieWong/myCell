@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小游戏</title>
+    <style>
+      .box1 {
+        margin: 20px auto;
+        width: 350px;
+        height: 800px;
+        border: 1px red solid;
+        overflow: hidden;
+      }
+
+      input {
+        width: 200px;
+        height: 25px;
+        margin-bottom: 20px;
+      }
+
+      .box2 {
+        width: 200px;
+        height: 700px;
+        margin: 50px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <div class="box2">
+        <input id="caculatePi" type="button" value="抽礼物" />
+        <input id="scissorRockPaper" type="button" value="剪刀、石头、布" />
+        <input id="whoIsBeautiful" type="button" value="魔镜判美" />
+        <br />
+      </div>
+    </div>
+
+    <script>
+        caculatePi.addEventListener("click", function() {
+            window.location.href = ("../../html/runLoop.html");
+        });
+
+        scissorRockPaper.addEventListener("click", function() {
+            window.location.href = ("../smallGame/scissorRockPaper/index.html");
+        });
+
+        whoIsBeautiful.addEventListener("click", function() {
+            window.location.href = ("../smallGame/whoIsBeautiful/index.html");
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>剪刀、石头、布</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="top">
+        你出<select name="playerAction" id="playerAction">
+          <option value="scissor">scissor</option>
+          <option value="rock">rock</option>
+          <option value="paper">paper</option></select
+        ><input id="run" type="button" value="开始" />
+        <br />
+        电脑出 <span id="computerAction"></span>
+        <br />
+        结局：<span id="gameResult"></span> <br /><br />
+
+        <p>统计：</p>
+        <p>对局 <span id="sumPK"></span> 局</p>
+        <p>你赢了 <span id="winPK"></span> 局</p>
+        <p>胜率： <span id="winRate"></span>%</p>
+        <br />
+        <input id="reset" type="button" value="重置" />
+      </div>
+    </div>
+
+    <script>
+      run.addEventListener("click", function () {
+        sumPK++;
+        SRPGame();
+        document.getElementById("sumPK").innerHTML = sumPK;
+      });
+
+      var sumPK = 0,
+        winPK = 0,
+        winRate = 0;
+
+      function SRPGame() {
+        var playerAction = document.getElementById("playerAction").value;
+        console.log("你出" + playerAction);
+        var random = Math.random() * 3;
+
+        if (random < 1) {
+          var computerAction = "rock";
+        } else if (random > 2) {
+          var computerAction = "scissor";
+        } else {
+          var computerAction = "paper";
+        }
+        console.log("电脑出" + computerAction);
+        document.getElementById("computerAction").innerHTML = computerAction;
+
+        if (computerAction === playerAction) {
+          console.log("平局");
+          document.getElementById("gameResult").innerHTML = "平局,放你一马";
+        } else if (
+          (computerAction === "rock" && playerAction === "paper") ||
+          (computerAction === "paper" && playerAction === "scissor") ||
+          (computerAction === "scissor" && playerAction === "rock")
+        ) {
+          winPK++;
+          document.getElementById("winPK").innerHTML = winPK;
+          console.log("你赢了");
+          document.getElementById("gameResult").innerHTML = "真厉害，你赢了";
+        } else {
+          console.log("你输了");
+          document.getElementById("gameResult").innerHTML = "哈哈，你输了";
+        }
+
+        console.log("sumPK = " + sumPK);
+        console.log("winPK = " + winPK);
+        // winRate = Number(winRate);
+        // .toFixed(4) 保留4位小数
+        winRate = (winPK / sumPK) * 100;
+        winRate = winRate.toFixed(2);
+        console.log("winRate = " + winRate);
+        document.getElementById("winRate").innerHTML = winRate;
+      }
+
+      reset.addEventListener("click", function () {
+        sumPK = 0;
+        winPK = 0;
+        winRate = 0;
+        document.getElementById("computerAction").innerHTML = "";
+        document.getElementById("gameResult").innerHTML = "";
+        document.getElementById("sumPK").innerHTML = "";
+        document.getElementById("winPK").innerHTML = "";
+        document.getElementById("winRate").innerHTML = "";
+      });
+
+      // 统计网站被访问的次数
+      // 添加时间
+      var timeNow = Date();
+      function setStorage() {
+        if (localStorage.counter) {
+          localStorage.counter = Number(localStorage.counter) + 1;
+        } else {
+          localStorage.counter = 1;
+        }
+        return localStorage.counter;
+      }
+      var counter = setStorage();
+      var oBox = document.getElementById("box");
+      // oBox.innerHTML = "该网页被访问的次数为" + counter + "次" + " <br> " + timeNow;
+      console.log("该网页被访问的次数为" + counter + "次" + " \n" + timeNow);
+    </script>
+  </body>
+</html>

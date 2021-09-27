@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我写的网页</title>
+    <style>
+      .box1 {
+        margin: 20px auto;
+        width: 350px;
+        height: 800px;
+        border: 1px red solid;
+        overflow: hidden;
+      }
+
+      input {
+        width: 200px;
+        height: 25px;
+        margin-bottom: 20px;
+      }
+
+      .box2 {
+        width: 200px;
+        height: 700px;
+        margin: 50px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <div class="box2">
+        <input id="caculatePi" onclick="linkToXueChengZaiXian()" type="button" value="学成在线" />
+        <input id="scissorRockPaper" onclick="linkToShangPinHui()" type="button" value="尚品汇" />
+        <input id="scissorRockPaper" onclick="linkMi()" type="button" value="mi" />
+        <input id="scissorRockPaper" onclick="linkChineseHistoryMap()" type="button" value="中国地图历史" />
+        <input id="scissorRockPaper" onclick="linkCustomHeadImg()" type="button" value="定制头像" />
+        <br />
+      </div>
+    </div>
+    <script defer src="../js/webPageList.js"></script>
+  </body>
+</html>

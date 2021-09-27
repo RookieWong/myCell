@@ -1,0 +1,363 @@
+/* 格式化 */
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* body {
+  height: 3000px;
+} */
+
+.w {
+  width: 1226px;
+  margin: 0 auto;
+}
+
+/* 顶部一行 */
+.top {
+  height: 100px;
+  /* border: 1px red solid; */
+}
+
+.top img,
+ul,
+.userCenter,
+.search {
+  float: left;
+}
+
+.top ul li {
+  float: left;
+}
+
+.logo {
+  margin: 30px 0 0 50px;
+}
+
+.top ul {
+  margin-left: 40px;
+}
+
+.top ul li {
+  line-height: 100px;
+  padding: 0 25px;
+}
+
+.top .search {
+  margin-left: 65px;
+  line-height: 100px;
+}
+
+.top .search input:nth-child(1) {
+  width: 390px;
+  height: 36px;
+  outline: none;
+  border: 2px #00a7ff solid;
+}
+
+:root {
+  --iconWidth: 40px;
+}
+
+.top .search input:nth-child(2) {
+  vertical-align: middle;
+  width: var(--iconWidth);
+  height: var(--iconWidth);
+  margin-left: -5px;
+  border: none;
+  background-image: url(./img/btn.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.userCenter {
+  margin-top: 35px;
+  margin-left: 30px;
+}
+
+.top .userCenter img {
+  width: 33px;
+}
+
+.top .userCenter span {
+  position: relative;
+  top: 12px;
+}
+
+/* 导航板块 */
+.nav {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 1200px;
+  height: 420px;
+  background-image: url(./img/banner2.png);
+  /* margin-bottom: 20px; */
+}
+
+.nav .aside {
+  float: left;
+  margin-left: 100px;
+  padding-top: 15px;
+  height: 405px;
+  background-color: rgba(83, 74, 74, 0.719);
+}
+.nav .aside li {
+  color: #fff;
+  height: 45px;
+  width: 150px;
+  padding-left: 1em;
+}
+
+.nav .aside li span {
+  padding-left: 60px;
+}
+
+.nav .courseTable {
+  float: left;
+  width: 200px;
+  height: 270px;
+  margin-left: 670px;
+  margin-top: 50px;
+  background-color: #fff;
+  text-align: center;
+  /* border: 1px red solid; */
+}
+
+.courseTable > ul {
+  width: 200px;
+  height: 270px;
+}
+
+.nav .courseTable > ul > li {
+  height: 40px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 40px;
+  background-color: #88d0eb;
+}
+
+.nav .inner {
+  /* float: left; */
+  width: 170px;
+  /* margin: 0 auto; */
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.nav .line {
+  border-top: 2px rgba(0, 0, 0, 0.247) solid;
+  margin: 10px 0;
+}
+
+.nav .courseTable ul ul li p:nth-child(1) {
+  font-size: 16px;
+}
+
+.nav .courseTable ul ul li p:nth-child(2) {
+  font-size: 12px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.247);
+}
+
+.nav input {
+  width: 170px;
+  height: 35px;
+  cursor: pointer;
+  color: #6cccff;
+  font-weight: 600;
+  font-size: 16px;
+  outline: none;
+  background-color: #fff;
+  border: 2px #6cccff solid;
+  margin-top: -5px;
+}
+
+/* 精品推荐 */
+.recommend {
+  overflow: hidden;
+  /* 为什么加不了margin-top? */
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 1000px;
+  height: 45px;
+  line-height: 45px;
+  box-shadow: 3px 3px 3px #999;
+}
+
+.recommend ul {
+  float: left;
+  padding-left: 10px;
+}
+
+.recommend ul li {
+  float: left;
+  padding: 0 10px;
+}
+
+.recommend ul li:nth-child(1) {
+  color: #00a7ff;
+}
+
+.recommend ul li:nth-child(2n) {
+  color: rgba(0, 0, 0, 0.247);
+}
+
+.recommend > li {
+  float: right;
+  color: #00a7ff;
+  padding: 0 20px;
+}
+
+/* 精品推荐课程 */
+.courseRecommend {
+  margin: 0 auto;
+  margin-top: 15px;
+  width: 1000px;
+  background-color: rgba(0, 0, 0, 0.103);
+  overflow: hidden;
+  /* 为什么加不了边框? */
+  border: 5x red solid;
+}
+
+.courseRecommend>span:nth-child(1) {
+  float: left;
+  font-size: 18px;
+  margin-top: 12px;
+  color: black;
+  margin-left: 17px;
+  font-weight: 600;
+}
+
+.courseRecommend>span:nth-child(2) {
+  float: right;
+  margin-right: 16px;
+  margin-top: 12px;
+  font-size: 15px;
+  color: black;
+  font-weight: 300;
+}
+
+.courseRecommend .course {
+  width: 1000px;
+}
+
+.courseRecommend .course > ul > li {
+  float: left;
+  width: 180px;
+  height: 210px;
+  /* border: 1px red solid; */
+  background-color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 18px;
+  margin-left: 17px;
+}
+
+.courseRecommend .course > ul > li > ul {
+  /* border: 1px red solid; */
+  width: 160px;
+  height: 70px;
+  /* 为什么此处的margin居中不生效？ */
+  /* margin: 0 auto; */
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.courseRecommend .course > ul > li > ul > li:nth-child(2) {
+  margin-bottom: 10px;
+}
+
+.courseRecommend .course > ul > li > ul > li:nth-child(3) {
+  color: rgba(0, 0, 0, 0.247);
+}
+
+.courseRecommend .course > ul > li span {
+  font-size: 10px;
+  color: #ff8169;
+  position: relative;
+  bottom: 1px;
+}
+
+.courseRecommend .course li img {
+  width: 180px;
+}
+
+.courseRecommend .bottomLine {
+  width: 1000px;
+  height: 20px;
+}
+
+/* 设置hotLogo */
+.courseRecommend .course > ul > li:nth-child(2) {
+  position: relative;
+}
+
+.courseRecommend .course > ul > li:nth-child(2) > ul > li img {
+  width: 30px;
+  position: absolute;
+  top: 2px;
+  right: -2.5px;
+}
+
+/* 底部信息 */
+.bottomInformation {
+  width: 1200px;
+  height: 200px;
+  /* border: 1px red solid; */
+  margin: 0 auto;
+}
+
+.bottomInformation .leftInformation {
+  float: left;
+  /* border: 1px red solid; */
+  margin-left: 100px;
+  margin-top: 13px;
+  width: 500px;
+}
+
+.bottomInformation img {
+  margin-top: 30px;
+  margin-bottom: 21px;
+  width: 150px;
+}
+
+.bottomInformation p {
+  font-size: 12px;
+}
+
+.bottomInformation button {
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  margin-top: 13px;
+  background-color: #fff;
+  border: 2px #03a7ff solid;
+  font-size: 15px;
+  font-weight: 500;
+  color: #00a7ff;
+}
+
+/* 设置底部右边信息 */
+.bottomInformation .rightInformation {
+  width: 400px;
+  height: 160px;
+  margin-left: 120px;
+  margin-top: 21px;
+  /* border: yellow 1px solid; */
+  float: left;
+  font-size: 13px;
+  line-height: 25px;
+}
+
+.bottomInformation .rightInformation ul {
+  margin-left: 47px;
+  margin-top: 6px;
+}
+
+.bottomInformation .rightInformation ul li:nth-child(1) {
+  font-size: 16px;
+  /* color: red; */
+}

@@ -1,0 +1,51 @@
+body {
+  background-color: rgba(255, 255, 255, 0.37);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  width: 250px;
+  height: 590px;
+  margin: 0 auto;
+  margin-top: 80px;
+  border: 1px rgba(71, 71, 71, 0.479) solid;
+  /* background-color: rgba(255, 255, 255, 0.37); */
+  /* 外边距重叠用overflow:hidden; */
+  overflow: hidden;
+}
+
+.wrapper > button {
+  display: block;
+  width: 200px;
+  height: 40px;
+  margin: 20px auto;
+  background-color: transparent;
+}
+
+button:hover {
+  background-color: aqua;
+}
+
+.wrapper > button:nth-child(1) {
+  margin-top: 30px;
+  top: 10px;
+}
+
+video#bgvid {
+  position: fixed;
+  top: 0;
+  left: -20px;
+  right: 0;
+  bottom: 0;
+  min-width: 20%;
+  min-height: 20%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  /* background: url(girlGif.jpg) no-repeat; */
+  background-size: cover;
+}

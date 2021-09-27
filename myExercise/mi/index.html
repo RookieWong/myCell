@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      mi
+    </title>
+    <!-- 浏览器title左边的小logo -->
+    <link rel="icon" href="img/logo-mi2purple.png" type="img/x-ico" />
+    <!-- 引入重置样式表 -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <!-- 引入公共样式表 -->
+    <link rel="stylesheet" href="./css/base.css" />
+    <!-- 引入图标字体库 -->
+    <link rel="stylesheet" href="./fa/css/all.css" />
+    <!-- 引入当前页面的样式表 -->
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+
+  <body>
+    <script src="./js/index.js" defer></script>
+
+    <!-- 顶部导航条 -->
+    <!-- 顶部导航条外部容器 -->
+    <div class="topbar-wrapper">
+      <!-- 创建内部容器 -->
+      <div class="topbar w clearfix">
+        <!-- 左侧的导航 -->
+        <ul class="service">
+          <li><a href="javascript:;">小米商城</a></li>
+          <li class="line">|</li>
+          <li><a href="javascript:;">MIUI</a></li>
+          <li class="line">|</li>
+          <li><a href="javascript:;">LOT</a></li>
+          <li class="line">|</li>
+          <li><a href="javascript:;">云服务</a></li>
+          <li class="line">|</li>
+          <li><a href="javascript:;">金融</a></li>
+          <li class="line">|</li>
+          <li><a href="javascript:;">有品</a></li>
+          <li class="line">|</li>
+          <li><a href="javascript:;">小爱开发平台</a></li>
+          <li class="line">|</li>
+          <li><a href="javascript:;">企业团购</a></li>
+          <li class="line">|</li>
+          <li><a href="javascript:;">资质证照</a></li>
+          <li class="line">|</li>
+          <li><a href="javascript:;">协议规则</a></li>
+          <li class="line">|</li>
+          <li><a href="javascript:;">下载app</a></li>
+          <li class="line">|</li>
+          <li><a href="javascript:;">Select Location</a></li>
+          <li class="line">|</li>
+        </ul>
+
+        <!-- 购物车 -->
+        <ul class="shop-cart">
+          <li>
+            <a href="javascript:;">
+              <i class="fas fa-shopping-cart"></i>
+              购物车（0）
+            </a>
+          </li>
+        </ul>
+
+        <!-- 用户登录注册 -->
+        <ul class="user-info">
+          <li><a href="javascript:;" onClick="open_login()">登录</a></li>
+          <li class="line">|</li>
+          <li><a href="javascript:;" onClick="open_register()">注册</a></li>
+          <li class="line">|</li>
+          <li><a href="javascript:;">消息通知</a></li>
+          <li class="line">|</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 设置登录弹窗 -->
+    <div class="login">
+      <div id="loginbg"></div>
+      <div id="login">
+        <h2>
+          <input
+            id="close_login"
+            type="button"
+            title="退出登录"
+            value="X"
+            onClick="close_login()"
+          />
+        </h2>
+        <ul>
+          <form
+            id="LoginForm"
+            name="LoginForm"
+            action="index.php"
+            method="GET"
+            enctype="multipart/form-data"
+          >
+            <li>
+              <!-- <input id="loginType" name="loginType" type="hidden" /> -->
+              <label class="usern" id="logtype" for="email">用户名:</label>
+              <input
+                id="username"
+                name="username"
+                type="text"
+                autocomplete="off"
+                placeholder="输入任意一个符号"
+              />
+            </li>
+            <li>
+              <label for="password" class="passw">密　码:</label>
+              <input placeholder="输入任意一个符号" id="password" name="password" type="password" />
+            </li>
+            <li>
+              <div>
+                <input id="autoLogin" name="autoLogin" type="checkbox" />
+                <label for="autoLogin">下次自动登录</label>
+              </div>
+            </li>
+            <li>
+              <div>
+                <input
+                  id="fnlogin"
+                  type="button"
+                  value="登&emsp;录"
+                  onclick="checkUser()"
+                />
+              </div>
+            </li>
+          </form>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 设置注册弹窗 -->
+    <div class="register">
+      <div id="registerbg"></div>
+      <div id="register">
+        <h2>
+          <input
+            id="close_register"
+            type="button"
+            title="退出注册"
+            value="X"
+            onClick="close_register()"
+          />
+          <a name="用户名">注册</a>
+        </h2>
+        <br /><br />
+        <ul>
+          <form
+            id="RegisterForm"
+            name="RegisterForm"
+            action="index.php"
+            method="GET"
+            enctype="multipart/form-data"
+          >
+            <li>
+              <!-- <input id="registerType" name="registerType" type="hidden" /> -->
+              <label class="usern" id="logtype" for="email">用户名:</label>
+                <input
+                  id="usernameRegister"
+                  name="usernameRegister"
+                  type="text"
+                  autocomplete="off"
+                />
+            </li>
+            <li>
+              <label for="password" class="passw">密　码:</label>
+                <input
+                  id="passwordRegister"
+                  name="passwordRegister"
+                  type="password"
+                />
+            </li>
+            <li>
+            </li>
+            <li>
+              <div>
+                <input
+                  id="fnregister"
+                  type="button"
+                  value="注&emsp;册"
+                  onclick="checkUserRegister()"
+                />
+              </div>
+            </li>
+          </form>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 设置nav -->
+    <div class="site-header">
+      <div class="container w">
+        <a href="JavaScript:;"><img id="logo" src="./img/logo-mi2purple.png" /></a>
+        <ul class="nav-list">
+          <li><a href="#">小米手机</a></li>
+          <li><a href="#">Redmi红米</a></li>
+          <li><a href="#">电视</a></li>
+          <li><a href="#">笔记本</a></li>
+          <li><a href="#">家电</a></li>
+          <li><a href="#">路由器</a></li>
+          <li><a href="#">智能硬件</a></li>
+          <li><a href="#">服务</a></li>
+          <li><a href="#">社区</a></li>
+          <div class="search">
+            <input type="text" />
+          </div>
+        </ul>
+      </div>
+
+      <!-- 设置内容区 -->
+      <div class="content w">
+        <div class="aside">
+          <div class="aside-wrapper">
+            <ul>
+              <li><a href="JavaScript:;">home<img class="arrow" src="./img/arrow1.png" onmouseover="this.style.transform = 'rotate(90deg)'" onmouseout="this.style.transform = 'rotate(360deg)'"></a></li>
+              <li><a href="JavaScript:;">aside<img class="arrow" src="./img/arrow1.png" onmouseover="this.style.transform = 'rotate(90deg)'" onmouseout="this.style.transform = 'rotate(360deg)'"></a></li>
+              <li><a href="JavaScript:;">Google<img class="arrow" src="./img/arrow1.png" onmouseover="this.style.transform = 'rotate(90deg)'" onmouseout="this.style.transform = 'rotate(360deg)'"></a></li>
+              <li><a href="JavaScript:;">商品列表<img class="arrow" src="./img/arrow1.png" onmouseover="this.style.transform = 'rotate(90deg)'" onmouseout="this.style.transform = 'rotate(360deg)'"></a></li>
+              <li><a href="JavaScript:;">商品列表<img class="arrow" src="./img/arrow1.png" onmouseover="this.style.transform = 'rotate(90deg)'" onmouseout="this.style.transform = 'rotate(360deg)'"></a></li>
+              <li><a href="JavaScript:;">商品列表<img class="arrow" src="./img/arrow1.png" onmouseover="this.style.transform = 'rotate(90deg)'" onmouseout="this.style.transform = 'rotate(360deg)'"></a></li>
+              <li><a href="JavaScript:;">商品列表<img class="arrow" src="./img/arrow1.png" onmouseover="this.style.transform = 'rotate(90deg)'" onmouseout="this.style.transform = 'rotate(360deg)'"></a></li>
+              <li><a href="JavaScript:;">商品列表<img class="arrow" src="./img/arrow1.png" onmouseover="this.style.transform = 'rotate(90deg)'" onmouseout="this.style.transform = 'rotate(360deg)'"></a></li>
+              <li><a href="JavaScript:;">商品列表<img class="arrow" src="./img/arrow1.png" onmouseover="this.style.transform = 'rotate(90deg)'" onmouseout="this.style.transform = 'rotate(360deg)'"></a></li>
+              <li><a href="JavaScript:;">商品列表<img class="arrow" src="./img/arrow1.png" onmouseover="this.style.transform = 'rotate(90deg)'" onmouseout="this.style.transform = 'rotate(360deg)'"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bigimg"></div>
+      </div>
+    </div>
+  </body>
+</html>
